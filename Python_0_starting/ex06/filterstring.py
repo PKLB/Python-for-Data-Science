@@ -6,7 +6,8 @@ def ft_filterstring(words, nb):
 	except ValueError:
 		return print("AssertionError: argument is not an integer")
 	words_list = words.split(" ")
-	print([word for word in words_list if len(word) > realnumber])
+	words_list = list(filter(lambda word: len(word) > realnumber, words_list))
+	print (words_list)
 
 if __name__ == "__main__":
 	try:
