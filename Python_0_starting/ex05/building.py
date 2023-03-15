@@ -14,7 +14,7 @@ def main(stringo):
             lowercase_counter = lowercase_counter + 1
         elif (i.isdigit()):
             digit_counter = digit_counter + 1
-        elif (i == ' '):
+        elif (i == ' ' or i == '\n'):
             space_counter = space_counter + 1
         else:
             punctuation_counter = punctuation_counter + 1
