@@ -17,13 +17,3 @@ def NULL_not_found(object: any) -> int:
 	else:
 		print ("Type not found")
 	return 1
-
-# $>python test_my_ex02.py | cat -e
-# Nothing: None <class 'NoneType'>$
-# Cheese: nan <class 'float'>$
-# Zero: 0 <class 'int'>$
-# Empty: <class 'str'>$
-# Fake: False <class 'bool'>$
-# Type not Found$
-# 1$
-# $>
