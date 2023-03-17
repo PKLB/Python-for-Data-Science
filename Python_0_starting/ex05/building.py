@@ -5,11 +5,7 @@ def main(stringo):
     """Takes a single string argument and displays the sums of its
     upper-case characters,lower-case characters,
     punctuation characters and spaces and outputsthe sums of each."""
-    uppercase_counter = 0
-    lowercase_counter = 0
-    punctuation_counter = 0
-    space_counter = 0
-    digit_counter = 0
+    [uppercase_counter := 0,lowercase_counter := 0,punctuation_counter := 0,space_counter := 0,digit_counter := 0]
     for i in stringo:
         if (i.isupper()):
             uppercase_counter = uppercase_counter + 1

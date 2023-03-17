@@ -13,7 +13,9 @@ def main(number):
 
 if __name__ == "__main__":
     try:
-        assert len(sus.argv) == 2, "AssertionError: wrong number of arguments"
+        assert len(sus.argv) < 3, "AssertionError: more than one argument are provided"
+        if  len(sus.argv) < 2:
+            sus.exit()
         main(sus.argv[1])
     except AssertionError as bad_args:
         print(bad_args)
