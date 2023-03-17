@@ -2,6 +2,9 @@ import sys as sus
 
 
 def main(stringo):
+    """Takes a single string argument and displays the sums of its
+    upper-case characters,lower-case characters,
+    punctuation characters and spaces and outputsthe sums of each."""
     uppercase_counter = 0
     lowercase_counter = 0
     punctuation_counter = 0
@@ -14,7 +17,7 @@ def main(stringo):
             lowercase_counter = lowercase_counter + 1
         elif (i.isdigit()):
             digit_counter = digit_counter + 1
-        elif (i == ' ' or i == '\n'):
+        elif (i.isspace() or i == '\n' or i == '\t' or i == '\r'):
             space_counter = space_counter + 1
         else:
             punctuation_counter = punctuation_counter + 1
@@ -33,4 +36,4 @@ if __name__ == "__main__":
         print("AssertionError: more than one argument are provided")
     elif len(sus.argv) != 2:
         print("What is the text to count?")
-        main(input())
+        main(sus.stdin.readline())

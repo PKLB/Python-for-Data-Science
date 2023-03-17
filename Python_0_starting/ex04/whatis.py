@@ -1,18 +1,19 @@
 import sys as sus
 
 def main(number):
-	try:
-		realnumber = int(number)
-	except ValueError:
-		return print("AssertionError: argument is not an integer")
-	if realnumber % 2 == 0:
-		return print("I'm Even.")
-	if realnumber % 2 != 0:
-		return print("I'm Odd.")
+    try:
+        int(number)
+    except ValueError:
+        raise AssertionError("AssertionError: argument is not an integer")
+    realnumber = int(number)
+    if realnumber % 2 == 0:
+        return print("I'm Even.")
+    if realnumber % 2 != 0:
+        return print("I'm Odd.")
 
 if __name__ == "__main__":
-	if len(sus.argv) == 2:
-		main(sus.argv[1])
-	if len(sus.argv) > 2:
-		print("AssertionError: more than one argument are provided")
- 
+    try:
+        assert len(sus.argv) == 2, "AssertionError: wrong number of arguments"
+        main(sus.argv[1])
+    except AssertionError as bad_args:
+        print(bad_args)

@@ -2,6 +2,7 @@ import sys as sus
 
 
 def ft_filterstring(words, nb):
+    """Takes a string S and an integer N as argument and print a list of words in S that contains more than N characters."""
     try:
         realnumber = int(nb)
     except ValueError:
@@ -9,7 +10,6 @@ def ft_filterstring(words, nb):
     words_list = words.split(" ")
     words_list = list(filter(lambda word: len(word) > realnumber, words_list))
     print([word for word in words_list if len(word) > realnumber])
-
 
 
 if __name__ == "__main__":
