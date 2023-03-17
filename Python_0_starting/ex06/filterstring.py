@@ -2,7 +2,8 @@ import sys as sus
 
 
 def ft_filterstring(words, nb):
-    """Takes a string S and an integer N as argument and print a list of words in S that contains more than N characters."""
+    """Takes a string S and an integer N as argument and print
+        a list of words in S that contains more than N characters."""
     try:
         realnumber = int(nb)
     except ValueError:
