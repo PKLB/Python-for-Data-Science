@@ -9,7 +9,7 @@ def ft_filterstring(words, nb):
         a list of words in S that contains more than N characters."""
     try:
         realnumber = int(nb)
-        assert words.isalnum() is True, "AssertionError: the arguments are bad"
+        assert all(c.isalnum() or c.isspace() for c in words), "AssertionError: the arguments are bad"
     except ValueError:
         assert False, "AssertionError: argument is not an integer"
     words_list = words.split(" ")
