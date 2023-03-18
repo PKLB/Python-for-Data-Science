@@ -2,6 +2,7 @@ import sys as sus
 
 
 def ft_sos(words):
+    """Converts your string to morse, only accepts alnum characters"""
     try:
         assert all(c.isalnum() or c.isspace()
                    for c in words), "AssertionError: the arguments are bad"
@@ -21,10 +22,12 @@ def ft_sos(words):
                        '4': '....-', '5': '.....', '6': '-....',
                        '7': '--...', '8': '---..', '9': '----.',
                        '0': '-----', ' ': '/'}
+    finalmorse = ""
     for char in words:
         morse_code = MORSE_CODE_DICT.get(char)
         if morse_code:
-            print(morse_code, end="")
+            finalmorse += morse_code + " "
+    print(finalmorse[:-1])
 
 
 if __name__ == "__main__":
