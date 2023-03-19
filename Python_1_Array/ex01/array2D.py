@@ -17,3 +17,5 @@ def slice_me(family: list, start: int, end: int) -> list:
     newarray = newarray[bim]
     print("My new shape is :", newarray.shape)
     return newarray.tolist()
+
+#!checker la taille de chaque row
