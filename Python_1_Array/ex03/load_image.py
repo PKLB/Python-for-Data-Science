@@ -3,6 +3,7 @@ import numpy as nompy
 
 
 def ft_load(path: str) -> nompy.array:
+    """Loads an image and crop it"""
     type = [".jpeg", ".jpg"]
     try:
         assert isinstance(path, str), "wrong typeee 🤣🤣🤣"

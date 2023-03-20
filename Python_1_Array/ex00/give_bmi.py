@@ -1,5 +1,7 @@
 import numpy as nompy
 
+# height = [0, 0]
+# weight = [165.3, 38.4]
 
 def give_bmi(height: list[int | float],
              weight: list[int | float]) -> list[int | float]:
@@ -26,7 +28,7 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     try:
         assert isinstance(bmi, list) and isinstance(limit, int), "Wrong type"
         assert all(isinstance(h, (int, float))
-                   for h in bmi), "List elements must be intsor floats"
+                   for h in bmi), "List elements must be ints or floats"
     except AssertionError as bad_args:
         print(bad_args)
         return

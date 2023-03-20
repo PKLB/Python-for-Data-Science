@@ -1,5 +1,8 @@
 import numpy as nompy
 
+# print(slice_me(125, 0, 2))
+# print(slice_me(family, '0', 2))
+# print(slice_me(family, 20))
 
 def slice_me(family: list, start: int, end: int) -> list:
     """takes as parameters a 2D array that print its shape, and returns
@@ -18,4 +21,4 @@ def slice_me(family: list, start: int, end: int) -> list:
     print("My new shape is :", newarray.shape)
     return newarray.tolist()
 
-#!checker la taille de chaque row
+#!checker la taille de chaque rowx
