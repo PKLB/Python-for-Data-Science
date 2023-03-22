@@ -20,7 +20,7 @@ def ft_load(path: str) -> nompy.array:
     img_cropped = img_cropped.convert('L')
     print("The shape of image is:", nompy.array(img_cropped).shape)
 
-    img_cropped = img_cropped.rotate(90, Image.NEAREST, expand = 1)
+    img_cropped = img_cropped.rotate(90, Image.NEAREST, expand=1)
     img_cropped = img_cropped.transpose(Image.FLIP_TOP_BOTTOM)
     img_cropped.show()
     print(nompy.array(img_cropped).reshape(400, 400, 1))

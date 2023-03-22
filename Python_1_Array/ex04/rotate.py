@@ -7,4 +7,4 @@ def ft_rotate(path: str):
 
 
 if __name__ == "__main__":
-	ft_rotate("animal.jpeg") 
+    ft_rotate("animal.jpeg")

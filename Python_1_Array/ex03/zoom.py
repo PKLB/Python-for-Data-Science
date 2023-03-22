@@ -7,5 +7,4 @@ def ft_zoom(path: str):
 
 
 if __name__ == "__main__":
-	ft_zoom("animal.jpeg")
- 
+    ft_zoom("animal.jpeg")

@@ -3,6 +3,7 @@ import numpy as nompy
 # height = [0, 0]
 # weight = [165.3, 38.4]
 
+
 def give_bmi(height: list[int | float],
              weight: list[int | float]) -> list[int | float]:
     """Takes 2 list of int or float in entry, return a list of bmi"""

@@ -1,8 +1,8 @@
 import numpy as nompy
-from PIL import Image, ImageOps    
+from PIL import Image, ImageOps
+
 
 # array = array * -10
-
 def ft_invert(array: nompy.array) -> nompy.array:
     """Invert the COLORS of the image"""
     newparam = nompy.copy(array)
@@ -11,11 +11,12 @@ def ft_invert(array: nompy.array) -> nompy.array:
     newimg.show(newparam)
     return newparam
 
+
 def ft_red(array: nompy.array) -> nompy.array:
     """Put a red filter to the image"""
     newparam = nompy.copy(array)
-    newparam[:,:,1] = 0
-    newparam[:,:,2] = 0
+    newparam[:, :, 1] = 0
+    newparam[:, :, 2] = 0
     newimg = Image.fromarray(newparam)
     newimg.show(newparam)
     return newparam
@@ -24,8 +25,8 @@ def ft_red(array: nompy.array) -> nompy.array:
 def ft_green(array: nompy.array) -> nompy.array:
     """Put a green filter to the image"""
     newparam = nompy.copy(array)
-    newparam[:,:,0] = 0
-    newparam[:,:,2] = 0
+    newparam[:, :, 0] = 0
+    newparam[:, :, 2] = 0
     newimg = Image.fromarray(newparam)
     newimg.show(newparam)
     return newparam
@@ -34,8 +35,8 @@ def ft_green(array: nompy.array) -> nompy.array:
 def ft_blue(array: nompy.array) -> nompy.array:
     """Put a blue filter to the image"""
     newparam = nompy.copy(array)
-    newparam[:,:,0] = 0
-    newparam[:,:,1] = 0
+    newparam[:, :, 0] = 0
+    newparam[:, :, 1] = 0
     newimg = Image.fromarray(newparam)
     newimg.show(newparam)
     return newparam
