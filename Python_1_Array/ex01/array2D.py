@@ -1,18 +1,21 @@
 import numpy as nompy
 
-# print(slice_me(125, 0, 2))
-# print(slice_me(family, '0', 2))
-# print(slice_me(family, 20))
-
 
 def slice_me(family: list, start: int, end: int) -> list:
     """takes as parameters a 2D array that print its shape, and returns
     a truncated version with start and end arguments."""
     try:
+        size = len(family[0])
+        for i in range(1, len(family)):
+            if len(family[i]) != size:
+                raise TypeError("Rows must have the same size")
+        assert isinstance(family, list), "Parameter must be a list"
+        assert isinstance(start, int) and isinstance(
+            end, int), "Slice indices must be integers"
         assert all(isinstance(element, (int, float))
                    for row in family
                    for element in row), "List must contain ints or floats"
-    except AssertionError as bad_args:
+    except (TypeError, AssertionError) as bad_args:
         print(bad_args)
         return
     newarray = nompy.array(family)
@@ -21,4 +24,3 @@ def slice_me(family: list, start: int, end: int) -> list:
     newarray = newarray[bim]
     print("My new shape is :", newarray.shape)
     return newarray.tolist()
-    # !checker la taille de chaque rowx

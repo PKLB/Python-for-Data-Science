@@ -2,7 +2,6 @@ import numpy as nompy
 from PIL import Image, ImageOps
 
 
-# array = array * -10
 def ft_invert(array: nompy.array) -> nompy.array:
     """Invert the COLORS of the image"""
     newparam = nompy.copy(array)

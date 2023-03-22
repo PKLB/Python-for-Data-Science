@@ -1,8 +1,5 @@
 import numpy as nompy
 
-# height = [0, 0]
-# weight = [165.3, 38.4]
-
 
 def give_bmi(height: list[int | float],
              weight: list[int | float]) -> list[int | float]:
@@ -15,12 +12,15 @@ def give_bmi(height: list[int | float],
                    for h in height), "Parameter must contain ints or floats"
         assert all(isinstance(w, (int, float))
                    for w in weight), "Parameter must contain ints or floats"
-    except AssertionError as bad_args:
-        print(bad_args)
+        arr = nompy.array(height) / 100
+        arr2 = nompy.array(weight) / 10000
+        if arr2.all() == 0 or arr.all() == 0:
+            raise ZeroDivisionError("Division by zero is not possible")
+        listo = (arr2 / arr ** 2).tolist()
+    except (ZeroDivisionError, AssertionError, ValueError) as bad_args:
+        print("Assertion error:", bad_args)
         return
-    arr = nompy.array(height) / 100
-    arr2 = nompy.array(weight) / 10000
-    return (arr2 / arr ** 2).tolist()
+    return (listo)
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:

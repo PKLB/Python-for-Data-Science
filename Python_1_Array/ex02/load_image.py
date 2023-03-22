@@ -1,10 +1,6 @@
 from PIL import Image, UnidentifiedImageError
 import numpy as nompy
 
-# c1r6p3% chmod 000 salut.jpeg
-# print(ft_load(""))
-# print(ft_load("adieu.jpeg")) adieu est un dossier HAHAHAHAHAHA CHEEEEH
-
 
 def ft_load(path: str) -> nompy.array:
     """Loads an image"""
