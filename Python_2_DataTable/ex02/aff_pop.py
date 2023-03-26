@@ -1,9 +1,11 @@
 from matplotlib import pyplot as plt
 from load_csv import load
 
+
 def main(path: str):
-    """calls the load function from the previous exercise, loads the file
-life_expectancy_years.csv, and displays the country information of your campus"""
+    """calls the load function from the previous exercise,
+    loads the file life_expectancy_years.csv, and displays
+    the country information of your campus"""
     try:
         df = load(path)
         X = df.loc[df["country"] == "France"]
@@ -17,11 +19,11 @@ life_expectancy_years.csv, and displays the country information of your campus""
         ax = plt.subplot()
         ax.set_xlabel("OoOooOoh Year")
         ax.set_ylabel("Population")
-        ax.plot(years[mask], Y_pop.values[0][mask], label = "France")
-        ax.plot(years[mask], X_pop.values[0][mask], label = "Belgium")
-        ax.set_xticks(range(1800,2041,40))
-        ax.set_yticks([20,40,60])
-        ax.set_yticklabels(["20M","40M","60M"])
+        ax.plot(years[mask], Y_pop.values[0][mask], label="France")
+        ax.plot(years[mask], X_pop.values[0][mask], label="Belgium")
+        ax.set_xticks(range(1800, 2041, 40))
+        ax.set_yticks([20, 40, 60])
+        ax.set_yticklabels(["20M", "40M", "60M"])
         plt.title("Population Projections")
         plt.show()
 
@@ -30,10 +32,6 @@ life_expectancy_years.csv, and displays the country information of your campus""
         print(bref)
         return
 
+
 if __name__ == "__main__":
     main("population_total.csv")
-    
-    
-# Create a program that calls the load function from the previous exercise, loads the file
-# life_expectancy_years.csv, and displays the country information of your campus. Your
-# graph must have a title and a legend for each axis.
