@@ -18,4 +18,4 @@ class calculator:
     def __truediv__(self, object) -> None:
         """Divides the values"""
         if object != 0:
-        	self.values = [x / object for x in self.values]
+            self.values = [x / object for x in self.values]

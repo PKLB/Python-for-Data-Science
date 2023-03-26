@@ -8,7 +8,7 @@ class King(Baratheon, Lannister):
         self.is_alive = True
         self.family_name = "Baratheon"
         self.eyes = "brown"
-        self.hairs = "dark" 
+        self.hairs = "dark"
 
     def get_eyes(self):
         """Eyes getter"""
